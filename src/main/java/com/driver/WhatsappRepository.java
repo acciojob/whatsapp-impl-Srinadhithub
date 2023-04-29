@@ -54,7 +54,8 @@ public class WhatsappRepository {
     public int createMessage(String content) {
         messageId++;
         SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy.HH:mm:ss");
-        Message message= new Message(messageId,content,new Date());
+        Date date=new Date();
+        Message message= new Message(messageId,content,date);
         return messageId;
     }
 
